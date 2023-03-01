@@ -21,59 +21,12 @@
         <div class="collapse navbar-collapse mx-3" id="navbarNavAltMarkup">
             <ul class="mx-sm-1 mx-auto navbar-nav w-100 d-flex nowrap justify-content-end">
                 {% if request.user.is_authenticated %}
-                <li class="nav-link mx-2">
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" role="button" id="about-dropdown" data-toggle="dropdown"
-                            aria-expanded="false">
-                            Alerts
-                        </a>
-                        <ul class="dropdown-menu shadow mt-2" aria-labelledby="about-dropdown">
-                            <li>
-                                <a class="dropdown-item" href="">No Alerts</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-link mx-2">
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" role="button" id="apps" data-toggle="dropdown"
-                            aria-expanded="false">
-                            Apps
-                        </a>
-                        <ul class="dropdown-menu shadow mt-2" aria-labelledby="about-dropdown">
-                            <li>
-                                <a class="dropdown-item" href="{% url 'timesheets' %}">Timesheets</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{% url 'calendar' %}">Calendar 2023</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="{% url 'marketing' %}">Marketing</a>
-                            </li>
-                            {% if request.user.is_superuser %}
-                            <li>
-                                <a class="dropdown-item" href="{% url 'admin:index' %}">Administration</a>
-                            </li>
-                            {% endif %}
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-link mx-2">
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" role="button" id="about-dropdown" data-toggle="dropdown"
-                            aria-expanded="false">
-                            Support
-                        </a>
-                        <ul class="dropdown-menu shadow mt-2" aria-labelledby="about-dropdown">
-                            <li>
-                                <a class="dropdown-item" href="">Contact Us</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="">Report</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Streams</a>
+                  </li>
                 {% endif %}
                 <li class="nav-link mx-2">
                     <div class="dropdown">
@@ -84,7 +37,7 @@
                         <ul class="dropdown-menu shadow mt-2" aria-labelledby="login-dropdown">
                             {% if request.user.is_authenticated %}
                             <li>
-                                <a class="dropdown-item" href="{% url 'profiles' %}"
+                                <a class="dropdown-item" href="/"
                                     aria-label="click here to view your profile">Profile</a>
                             </li>
                             <li>

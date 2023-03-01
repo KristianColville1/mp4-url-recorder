@@ -30,11 +30,11 @@ nav .navbar-nav a.nav-link {
     font-size: 18px;
     text-decoration: none !important;
     cursor: pointer;
-    color: white;
+    color: var(--capri);
 }
 
 nav {
-    background-color: #2967A1;
+    background-color: var(--snow);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 }
 
@@ -114,6 +114,7 @@ div#navbarSupportedContent {
     width: 100px;
 }
 
+a.nav-link:hover,
 .nav-link a:hover {
     color: var(--non-photo-blue) !important;
 }
@@ -187,27 +188,12 @@ footer {
     background-color: gray;
 }
 
-.work-week-no-bg {
-    color: var(--snow);
-    background-color: var(--ocean-green);
-    text-shadow: 1px 1px 1px var(--black);
-}
 @media only screen and (max-width: 991px) {
-    .clock {
-        width: 100%;
-    }
     nav div ul a.dropdown-toggle {
         margin-top: 60px;
     }
 }
 
 @media only screen and (max-width: 440px){
-    .timesheets-app,
-    .calendar-app,
-    .marketing-app {
-        height: 200px;
-        border: 2px outset;
-    }
-
 
 }
