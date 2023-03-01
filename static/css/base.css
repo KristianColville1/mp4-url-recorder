@@ -1,0 +1,213 @@
+:root {
+    /* CSS HEX */
+    --snow: #fcf7f8ff;
+    --ocean-green: #59c9a5ff;
+    --capri: #30c5ffff;
+    --prussian-blue: #23395bff;
+    --razzle-dazzle-rose: #ff3cc7ff;
+    --black: #28282B;
+
+    --medium-champagne: #f8e0a0ff;
+    --deep-saffron: #ffa347ff;
+    --blue-violet-crayola: #705fabff;
+    --non-photo-blue: #95daeeff;
+    --celeste: #b6f6f0ff;
+    --starsystems-blue: #2967A1;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    width: 100% !important;
+    scrollbar-gutter: stable both-edges;
+    overflow-y: scroll;
+}
+
+a,
+nav .navbar-nav a.nav-link {
+    font-size: 18px;
+    text-decoration: none !important;
+    cursor: pointer;
+    color: white;
+}
+
+nav {
+    background-color: #2967A1;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+}
+
+.navbar-brand img {
+    max-width: 200px;
+}
+
+div#navbarSupportedContent {
+    align-content: center;
+    justify-content: end;
+}
+
+/* ham menu */
+.navbar-toggler {
+    width: 55px;
+    height: 55px;
+    border: 2px outset var(--snow);
+    position: relative;
+    margin-right: 10px;
+}
+
+.ham {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.center-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+    transform: rotate(180deg);
+}
+
+.line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: white;
+    stroke-width: 5;
+    stroke-linecap: round;
+}
+
+.ham1 .top {
+    stroke-dasharray: 40 139;
+}
+
+.ham1 .bottom {
+    stroke-dasharray: 40 180;
+}
+
+.ham1.active .top {
+    stroke-dashoffset: -98px;
+}
+
+.ham1.active .bottom {
+    stroke-dashoffset: -138px;
+}
+
+
+/* end ham menu */
+
+.nav-link .dropdown {
+    width: 100px;
+}
+
+.nav-link a:hover {
+    color: var(--non-photo-blue) !important;
+}
+
+a.dropdown-item:hover {
+    color: var(--black) !important;
+}
+
+/***********************************Home */
+
+/***********************************Account (allauth)*/
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none !important;
+    /* Removes labels from allauth forms */
+}
+
+/************************************ Defaults */
+
+.bg-green {
+    background-color: var(--ocean-green);
+}
+
+/* toasts */
+.message-container {
+    position: fixed;
+    top: 100px;
+    right: 15px;
+    z-index: 99;
+    background-color: var(--black) !important;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 5px;
+}
+
+.toast,
+.toast-header,
+.custom-toast {
+    color: var(--black);
+}
+/************************************Footer*/
+footer {
+    width: 100%;
+    height: 155px;
+    background-color: whitesmoke;
+}
+
+.dropdown-item:hover {
+    background-color: aquamarine;
+}
+
+/***********************************Extra*/
+.bg1 {
+    background-color: red;
+}
+.bg2 {
+    background-color: var(--non-photo-blue);
+}
+.bg3 {
+    background-color: blue;
+}
+.bg4 {
+    background-color: pink;
+}
+.bg5 {
+    background-color: gray;
+}
+
+.work-week-no-bg {
+    color: var(--snow);
+    background-color: var(--ocean-green);
+    text-shadow: 1px 1px 1px var(--black);
+}
+@media only screen and (max-width: 991px) {
+    .clock {
+        width: 100%;
+    }
+    nav div ul a.dropdown-toggle {
+        margin-top: 60px;
+    }
+}
+
+@media only screen and (max-width: 440px){
+    .timesheets-app,
+    .calendar-app,
+    .marketing-app {
+        height: 200px;
+        border: 2px outset;
+    }
+
+
+}

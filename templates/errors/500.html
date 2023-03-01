@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid min-vh-100">
+    <div class="row mt-5">
+        <div class="col-sm-12 col-md-8 col-lg-4 offset-md-2 offset-lg-4 py-5 mt-5">
+            <h1 class="text-center">500 Error</h1>
+            <a href="{% url 'home' %}" type="button" class="btn btn-primary w-100"
+                aria-label="Click to return to the home page">Return Home</a>
+        </div>
+    </div>
+</div>
+{% endblock content%}

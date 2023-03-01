@@ -1,0 +1,113 @@
+{% load static %}
+
+<div class="nav-wrapper fixed-top nav-bg">
+    <nav class="container-fluid navbar navbar-expand-lg">
+        <a class="navbar-brand mx-2" href="{% url 'home' %}" aria-label="Click here to go to the home page">
+            <img src="{% static 'img/logo.png' %}" alt="">
+        </a>
+        <div class="btn navbar-toggler" data="hamburger-menu" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Click to view drop down menu" role="navigation">
+            <div class="center-svg">
+                <svg class="ham hamRotate ham1" viewBox="0 0 100 100" onclick="this.classList.toggle('active')">
+                    <path class="line top"
+                        d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+                    <path class="line middle" d="m 30,50 h 40" />
+                    <path class="line bottom"
+                        d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+                </svg>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse mx-3" id="navbarNavAltMarkup">
+            <ul class="mx-sm-1 mx-auto navbar-nav w-100 d-flex nowrap justify-content-end">
+                {% if request.user.is_authenticated %}
+                <li class="nav-link mx-2">
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" role="button" id="about-dropdown" data-toggle="dropdown"
+                            aria-expanded="false">
+                            Alerts
+                        </a>
+                        <ul class="dropdown-menu shadow mt-2" aria-labelledby="about-dropdown">
+                            <li>
+                                <a class="dropdown-item" href="">No Alerts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-link mx-2">
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" role="button" id="apps" data-toggle="dropdown"
+                            aria-expanded="false">
+                            Apps
+                        </a>
+                        <ul class="dropdown-menu shadow mt-2" aria-labelledby="about-dropdown">
+                            <li>
+                                <a class="dropdown-item" href="{% url 'timesheets' %}">Timesheets</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{% url 'calendar' %}">Calendar 2023</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{% url 'marketing' %}">Marketing</a>
+                            </li>
+                            {% if request.user.is_superuser %}
+                            <li>
+                                <a class="dropdown-item" href="{% url 'admin:index' %}">Administration</a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-link mx-2">
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" role="button" id="about-dropdown" data-toggle="dropdown"
+                            aria-expanded="false">
+                            Support
+                        </a>
+                        <ul class="dropdown-menu shadow mt-2" aria-labelledby="about-dropdown">
+                            <li>
+                                <a class="dropdown-item" href="">Contact Us</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="">Report</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                {% endif %}
+                <li class="nav-link mx-2">
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" role="button" id="login-dropdown" data-toggle="dropdown"
+                            aria-expanded="false">
+                            Settings
+                        </a>
+                        <ul class="dropdown-menu shadow mt-2" aria-labelledby="login-dropdown">
+                            {% if request.user.is_authenticated %}
+                            <li>
+                                <a class="dropdown-item" href="{% url 'profiles' %}"
+                                    aria-label="click here to view your profile">Profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="{% url 'account_logout' %}" aria-label="click here to sign out of FineChop">Sign
+                                    Out</a>
+                            </li>
+                            {% else %}
+                            <li>
+                                <a class="dropdown-item" href="{% url 'account_login' %}" aria-label="click here to login into FineChop">Sign
+                                    In</a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-link mx-2">
+                    <div id="clock" class="clock text-center" onload="currentTime()"></div>
+                    <div id="current_date" class="today-date text-center text-white fs-3 d-lg-none" onload="todaysDate()"></div>
+                </li>
+            </ul>
+        </div>
+            
+        
+    </nav>
+    
+</div>
