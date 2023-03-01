@@ -80,6 +80,14 @@ Any staff member tasked with collecting a recording and giving the result to the
 
 ### User Stories
 
+User roles:
+
+    User,
+    Staff Member,
+    Customer,
+    Marketer,
+    Site Owner
+
 | Issue ID | User Story |
 |---|---|
 |||
