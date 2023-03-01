@@ -27,7 +27,6 @@ Project Owners: Kristian Colville, Declan O'Sullivan
   * [Goals](#goals)
   * [Target Audience](#target-audience)
   * [Strategy](#strategy)
-* [Web Marketing](#web-marketing)
 * [Information Architecture](#information-architecture)
   * [Database](#database)
   * [Data Modeling](#data-modeling)
@@ -56,35 +55,70 @@ To use a web application capable of downloading a specific selection of a record
 The web application should be straightforward to use so that anyone performing this task can easily understand how to operate the web application.
 
 ### Site Owners Goals
+
+[Back to Top](#table-of-contents)
+
 ## User Experience
 ### Target Audience
 ### User Requirements and Expectations
 ### User Stories
+
+[Back to Top](#table-of-contents)
+
 ## Agile Methodology
 ### Epics
+
+[Back to Top](#table-of-contents)
+
 ## Design
 ### Color Scheme
 ### Typography
 ### Structure
 #### Wireframes
+
+[Back to Top](#table-of-contents)
+
 ## Business Model
 ### Goals
 ### Target Audience
 ### Strategy
-## Web Marketing
+
+[Back to Top](#table-of-contents)
+
 ## Information Architecture
 
 ![Basic Structure](documentation/img/basic-structure.png)
 
 ### Database
 ### Data Modeling
+
+[Back to Top](#table-of-contents)
+
 ## Features
+
+[Back to Top](#table-of-contents)
+
 ## Testing
+
+[Back to Top](#table-of-contents)
+
 ## Bugs
+
+[Back to Top](#table-of-contents)
+
 ## Technologies & Tools
+
+[Back to Top](#table-of-contents)
+
 ## Development & Deployment
 ### Version Control
 ### Cloning this Repository
 ### AWS
+
+[Back to Top](#table-of-contents)
+
 ## Credits
+
+[Back to Top](#table-of-contents)
+
 ## Acknowledgments
