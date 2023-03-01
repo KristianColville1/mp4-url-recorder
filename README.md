@@ -44,6 +44,7 @@ Project Owners: Kristian Colville, Declan O'Sullivan
 
 
 ## Project Goals
+
 ### User Goals
 ### Site Owners Goals
 ## User Experience
@@ -63,6 +64,9 @@ Project Owners: Kristian Colville, Declan O'Sullivan
 ### Strategy
 ## Web Marketing
 ## Information Architecture
+
+![Basic Structure](documentation/img/basic-structure.png)
+
 ### Database
 ### Data Modeling
 ## Features
