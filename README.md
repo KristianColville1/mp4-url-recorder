@@ -36,7 +36,6 @@ Project Owners: Kristian Colville, Declan O'Sullivan
 * [Technologies &amp; Tools](#technologies--tools)
 * [Development &amp; Deployment](#development--deployment)
   * [Version Control](#version-control)
-  * [Cloning this Repository](#cloning-this-repository)
   * [AWS](#aws)
 * [Credits](#credits)
 * [Acknowledgments](#acknowledgments)
@@ -62,6 +61,23 @@ The web application should be straightforward to use so that anyone performing t
 ### Target Audience
 ### User Requirements and Expectations
 ### User Stories
+
+| Issue ID | User Story |
+|---|---|
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
+|||
 
 [Back to Top](#table-of-contents)
 
@@ -92,6 +108,18 @@ The web application should be straightforward to use so that anyone performing t
 ### Database
 ### Data Modeling
 
+#### Model table example
+| Name | Database Key | Field Type | Validation |
+|---|---|---|---|
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+
 [Back to Top](#table-of-contents)
 
 ## Features
@@ -104,6 +132,25 @@ The web application should be straightforward to use so that anyone performing t
 
 ## Bugs
 
+| Issue ID | Expected Behaviour | Behaviour reported | Bug Fix |
+|---|---|---|---|
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+|||||
+
 [Back to Top](#table-of-contents)
 
 ## Technologies & Tools
@@ -112,7 +159,20 @@ The web application should be straightforward to use so that anyone performing t
 
 ## Development & Deployment
 ### Version Control
-### Cloning this Repository
+
+I used [Visual Studio Code](https://code.visualstudio.com/) as a local repository and IDE & [GitHub](https://github.com/) as a remote repository.
+
+1. Firstly, I needed to create a new repository on Github [mp4-url-recorder](https://github.com/KristianColville1/mp4-url-recorder).
+2. I opened that repository on my local machine by copying the URL from that repository and cloning it from my IDE for use.
+3. Visual Studio Code opened a new workspace for me.
+4. I created files and folders to use.
+5. To push my newly created files to GitHub I used the terminal by pressing Ctrl + shift + `.
+6. A new terminal opened and then I used the below steps.
+
+    - git add (name of the file) *This selects the file for the commit*
+    - git commit -m "Commit message: (i.e. Initial commit)" *Allows the developer to assign a specific concise statement to the commit*
+    - git push *The final command sends the code to GitHub*
+
 ### AWS
 
 [Back to Top](#table-of-contents)
