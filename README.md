@@ -127,6 +127,10 @@ Streams page
 
 ![streams](documentation/img/wireframe-streams.png)
 
+Stream Selection 
+
+![Stream Selection](documentation/img/wireframe-stream-selection.png)
+
 [Back to Top](#table-of-contents)
 
 ## Business Model
@@ -189,6 +193,9 @@ Streams page
 [Back to Top](#table-of-contents)
 
 ## Technologies & Tools
+
+- [Amazon Web Services EC2](https://aws.amazon.com)
+- [Mockplus](https://mockplus.com) for wireframing.
 
 [Back to Top](#table-of-contents)
 
