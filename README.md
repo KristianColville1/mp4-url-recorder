@@ -37,6 +37,7 @@ Project Owners: Kristian Colville, Declan O'Sullivan
 * [Development &amp; Deployment](#development--deployment)
   * [Version Control](#version-control)
   * [AWS](#aws)
+  * [Production Server Guide](#production-server-guide)
 * [Credits](#credits)
 * [Acknowledgments](#acknowledgments)
 
@@ -208,6 +209,10 @@ I used [Visual Studio Code](https://code.visualstudio.com/) as a local repositor
     - git push *The final command sends the code to GitHub*
 
 ### AWS
+
+### Production Server Guide
+
+[Please follow this link to the guide](set_up_production_server.md)
 
 [Back to Top](#table-of-contents)
 
