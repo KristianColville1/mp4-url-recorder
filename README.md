@@ -71,6 +71,13 @@ Increase the reliability of the service.
 Any staff member tasked with collecting a recording and giving the result to the customer.
 
 ### User Requirements and Expectations
+
+- Simplicity throughout the website for clear navigation to complete a recording.
+- Information is structured in an organized and easy-to-follow manner.
+- The CRUD functionality works as expected with feedback provided for each appropriate response.
+- The simplicity is perfectly implemented with no unnecessary complexity diminishing the user experience.
+- All personal information is securely stored and protected.
+
 ### User Stories
 
 | Issue ID | User Story |
