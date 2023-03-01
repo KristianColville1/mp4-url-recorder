@@ -92,6 +92,14 @@ The web application should be straightforward to use so that anyone performing t
 ### Structure
 #### Wireframes
 
+Home page
+
+![Home](documentation/img/wireframe-home.png)
+
+Home page
+
+![streams](documentation/img/wireframe-streams.png)
+
 [Back to Top](#table-of-contents)
 
 ## Business Model
