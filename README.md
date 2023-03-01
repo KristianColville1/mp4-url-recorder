@@ -55,10 +55,21 @@ The web application should be straightforward to use so that anyone performing t
 
 ### Site Owners Goals
 
+- Create a website that manages all of the complicated processes that are involved in getting a recording.
+- Simplify the experience and speed up the time to acquire a recording.
+- Build a powerful web application capable of performing CRUD functionality along with advanced programming capabilities.
+- Using FFMPEG select a portion of a file from a request header and use that to chop a selection so it can be given to a customer when requested.
+- Take the burden of storage for camera recordings to increase potential availability and revenue.
+Increase the reliability of the service.
+- Run the web application smoothly so advertising can commence on the product.
+
 [Back to Top](#table-of-contents)
 
 ## User Experience
 ### Target Audience
+
+Any staff member tasked with collecting a recording and giving the result to the customer.
+
 ### User Requirements and Expectations
 ### User Stories
 
@@ -96,7 +107,7 @@ Home page
 
 ![Home](documentation/img/wireframe-home.png)
 
-Home page
+Streams page
 
 ![streams](documentation/img/wireframe-streams.png)
 
