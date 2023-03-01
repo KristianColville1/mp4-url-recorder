@@ -196,6 +196,7 @@ Stream Selection
 
 - [Amazon Web Services EC2](https://aws.amazon.com)
 - [Mockplus](https://mockplus.com) for wireframing.
+- [VSCode](https://vscode.com) for testing and development.
 
 [Back to Top](#table-of-contents)
 
