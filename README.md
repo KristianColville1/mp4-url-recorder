@@ -39,8 +39,7 @@ Project Owners: Kristian Colville, Declan O'Sullivan
   * [Version Control](#version-control)
   * [AWS](#aws)
   * [Production Server Guide](#production-server-guide)
-* [Credits](#credits)
-* [Acknowledgments](#acknowledgments)
+* [Definitions](#definitions)
 
 
 ## Project Goals
@@ -211,7 +210,7 @@ within budget and capable of quick access. The automated system should help us i
 
 ## Testing
 
-Tests to perform:
+Large Tests to Perform:
 
   Bots:
 
@@ -222,7 +221,31 @@ Tests to perform:
 
   * Saving an mp4 file to an s3 bucket and downloading it from the website
   * Selecting a portion of a mp4 file from an s3 bucket and downloading.
+
+### Challenges
+
+ * File storage
+ * Recording 24/7 hr streams
+ * Automation
+ * FFMPEG use on HTML headers
+ * Data translation from file storage to the Front-End
+
+#### Tests
+
+Test 1 - Checking file formatting in S3 with Dollymount (clone of real stream on testing server).
+
+  1. Created an S3 bucket and EC2 with AntMediaServer installed.
+  2. Added S3 bucket credentials to the AMS server.
+
+Results
+
+  I added the credentials and tested recording a stream and these are the results.
   
+  ![test file formatting](documentation/tests/test-1-formatter.png)
+
+
+
+
 [Back to Top](#table-of-contents)
 
 ## Bugs
@@ -280,8 +303,13 @@ I used [Visual Studio Code](https://code.visualstudio.com/) as a local repositor
 
 [Back to Top](#table-of-contents)
 
-## Credits
+## Definitions
+
+#### M3U8 File:
+
+A file with the M3U8 file extension is a UTF-8 Encoded Audio Playlist file. They are plain text files that can be used by both audio and video players to describe where media files are located. They essentially point to the file or files that hold the requested content.
+
+The file can use absolute paths, relative paths, and URLs to refer to specific media files and/or entire folders of media files. Other information in the file might be comments that describe the contents.
 
 [Back to Top](#table-of-contents)
 
-## Acknowledgments
