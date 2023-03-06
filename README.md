@@ -290,6 +290,7 @@ Test 2 - Creating a script to pull an mp4 file from the S3.
 - [Amazon Web Services EC2](https://aws.amazon.com)
 - [Mockplus](https://mockplus.com) for wireframing.
 - [VSCode](https://vscode.com) for testing and development.
+- [FFMPEG Python](https://pypi.org/project/ffmpeg-python/) not to be confused with the reverse package of the same name, used for fetching and trimming recordings.
 
 [Back to Top](#table-of-contents)
 
