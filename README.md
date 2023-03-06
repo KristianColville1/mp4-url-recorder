@@ -266,8 +266,8 @@ Test 2 - Creating a script to pull an mp4 file from the S3.
 
 | Issue ID | Expected Behaviour | Behaviour reported | Bug Fix |
 |---|---|---|---|
-|[#1]||||
-|[#3]||||
+|[#1](https://github.com/KristianColville1/mp4-url-recorder/issues/1)|S3 mounting to production server and the streams sending files to the churchcamlive-recordings directory.|Broken directory, symlink broken when recording.| working on an alternate solution externally|
+|[#3](https://github.com/KristianColville1/mp4-url-recorder/issues/3)|Naming of folders to be /day-one/church-name/name_of_file.mp4|Naming of folders is set and will be /streams/name_of_file.mp4. Bad because it complicates the rest of the web application. Needs to be sorted asap for development purposes.||
 |||||
 |||||
 |||||
