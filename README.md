@@ -322,5 +322,13 @@ A file with the M3U8 file extension is a UTF-8 Encoded Audio Playlist file. They
 
 The file can use absolute paths, relative paths, and URLs to refer to specific media files and/or entire folders of media files. Other information in the file might be comments that describe the contents.
 
+#### FFMPEG:
+
+Fast Forward MPEG
+
+(Fast Forward MPEG) An open source multimedia project for working with audio and video. Based on the "libavcodec" A/V codec library and "libavformat" multiplexing framework, FFmpeg is a command-line utility that can encode and decode a variety of media formats.
+
+It is widely used for format transcoding, basic editing (trimming and concatenation), video scaling, and video post-production effects.
+
 [Back to Top](#table-of-contents)
 
