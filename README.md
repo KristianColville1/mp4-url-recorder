@@ -245,20 +245,31 @@ Test 1 - Checking file formatting in S3 with Dollymount (clone of real stream on
   | ----------------------------------------------------------------- | ---------- | ------- | ------- |
   | ![test file formatting](documentation/tests/test-1-formatter.png) | I added the credentials and tested recording a stream and these are the results. Saves in multipe formats, need to decipher whats needed for FFMPEG to parse.  | Removal of additional files possibly not needed. Files definitely need to be time stamped. MP4 file only shows once the stream has stopped (or incase of 24/7 stream is stopped)  | The folder architecture of 1 - 31 days will have to be looked at as it's unclear if this can be done from the AMS server.  |
   | ![test file storage](documentation/tests/test-1-storage.png) | After uploading to S3 bucket the storage goes down properly to 24.1MB, it went up as I turned it back on | local storage won't be impacted with multiple stream recording as AMS will delete files once completed and sent to S3 | This significantly reduces resource consumption on the server |
-  | ![test cpu usage](documentation/tests/test-1-cpu.png) | One stream recording and cpu is responding well. Will need a larger test peformed on the production server to gather more information but I suspect an upgrade to be possible | ------- | ------- |
-  | ----------------------------------------------------------------- | ---------- | ------- | ------- |
+  | ![test cpu usage](documentation/tests/test-1-cpu.png) | One stream recording and cpu is responding well. Will need a larger test peformed on the production server to gather more information but I suspect an upgrade to be possible... | ------- | ------- |
+
 
 Test 2 - Creating a script to pull an mp4 file from the S3.
 
   1.
 
   | Image / Code                                                      | Result     | Considerations | Additional |
+  | ----------------------------------------------------------------- | ---------- | ------- | ------- |
   | ![test recording](documentation/tests/test-2-recording.png) | successfully got 2 minutes of a stream using ffmpeg-python package | package is highly accessible, easy to read and small enough to parse in a few minutes. | The base structure for downloading with urls is built, however the front-end complicates the design. Needs additoinal information such as the file architure issue to be sorted. |
-  | ----------------------------------------------------------------- | ---------- | ------- | ------- |
-  | ----------------------------------------------------------------- | ---------- | ------- | ------- |
-  | ----------------------------------------------------------------- | ---------- | ------- | ------- |
-  | ----------------------------------------------------------------- | ---------- | ------- | ------- |
 
+Example code written.
+```
+FROM = '00:00:00'
+TO = '00:02:00'
+name_of_new_file = 'test.mp4'
+ffmpeg.input(url_to_download, ss=FROM, t=TO).output(
+    name_of_new_file, vcodec='copy', acodec='copy').overwrite_output().run()
+```
+
+What does this mean?
+
+Well it means the meta data we need is attached to the mp4 file and that's excellent in getting the recordings. This code can be adapted to calculate the time difference. The total time of the file will need to extracted in order to help determine ranges for the user to trim.
+
+It also means we don't need to download the whole file each time we need a selection from an mp4 file.
 
 [Back to Top](#table-of-contents)
 
