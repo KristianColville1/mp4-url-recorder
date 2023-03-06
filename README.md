@@ -237,12 +237,13 @@ Test 1 - Checking file formatting in S3 with Dollymount (clone of real stream on
   1. Created an S3 bucket and EC2 with AntMediaServer installed.
   2. Added S3 bucket credentials to the AMS server.
 
-| Image                                                             | Result     | Considerations |
-| ----------------------------------------------------------------- | ---------- | ------- |
-| ![test file formatting](documentation/tests/test-1-formatter.png) |   I added the credentials and tested recording a stream and these are the results. Saves in multipe formats, need to decipher whats needed for FFMPEG to parse.  | Removal of additional files possibly not needed. Files definitely need to be time stamped.   |
-| ----------------------------------------------------------------- | ---------- | ------- |
-| ----------------------------------------------------------------- | ---------- | ------- |
-| ----------------------------------------------------------------- | ---------- | ------- |
+  | Image                                                             | Result     | Considerations | Additional |
+  | ----------------------------------------------------------------- | ---------- | ------- | ------- |
+  | ![test file formatting](documentation/tests/test-1-formatter.png) | I added the credentials and tested recording a stream and these are the results. Saves in multipe formats, need to decipher whats needed for FFMPEG to parse.  | Removal of additional files possibly not needed. Files definitely need to be time stamped. MP4 file only shows once the stream has stopped (or incase of 24/7 stream is stopped)  | The folder architecture of 1 - 31 days will have to be looked at as it's unclear if this can be done from the AMS server.  |
+  | ----------------------------------------------------------------- | ---------- | ------- | ------- |
+  | ----------------------------------------------------------------- | ---------- | ------- | ------- |
+  | ----------------------------------------------------------------- | ---------- | ------- | ------- |
+
 [Back to Top](#table-of-contents)
 
 ## Bugs
