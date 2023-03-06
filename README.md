@@ -237,15 +237,12 @@ Test 1 - Checking file formatting in S3 with Dollymount (clone of real stream on
   1. Created an S3 bucket and EC2 with AntMediaServer installed.
   2. Added S3 bucket credentials to the AMS server.
 
-Results
-
-  I added the credentials and tested recording a stream and these are the results.
-  
-  ![test file formatting](documentation/tests/test-1-formatter.png)
-
-
-
-
+| Image                                                             | Result     | Considerations |
+| ----------------------------------------------------------------- | ---------- | ------- |
+| ![test file formatting](documentation/tests/test-1-formatter.png) |   I added the credentials and tested recording a stream and these are the results. Saves in multipe formats, need to decipher whats needed for FFMPEG to parse.  | Removal of additional files possibly not needed. Files definitely need to be time stamped.   |
+| ----------------------------------------------------------------- | ---------- | ------- |
+| ----------------------------------------------------------------- | ---------- | ------- |
+| ----------------------------------------------------------------- | ---------- | ------- |
 [Back to Top](#table-of-contents)
 
 ## Bugs
