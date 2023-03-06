@@ -31,6 +31,7 @@ Project Owners: Kristian Colville, Declan O'Sullivan
   * [Database](#database)
   * [Data Modeling](#data-modeling)
 * [Features](#features)
+* [Solutions](#solutions)
 * [Testing](#testing)
 * [Bugs](#bugs)
 * [Technologies &amp; Tools](#technologies--tools)
@@ -165,8 +166,63 @@ Stream Selection
 
 [Back to Top](#table-of-contents)
 
+## Solutions
+
+Overview of the problem:
+
+Currently it is difficult to obtain recordings from our primary source as they are typically overwritten.
+
+We want the recordings as these hold value and we can sell the recordings.
+
+We cannot advertise our product as the product is unreliable on our end.
+
+The product can be easily more reliable and viable if we take the responsibility on to ourselves and obtain the recordings through our own storage systems.
+
+### Goal Reminder
+
+Built a web app and a method of automation that can store and manage recordings. The storage system needs to be 
+within budget and capable of quick access. The automated system should help us identify recordings from the front-end of the web app.
+
+### Possible topologies and solutions
+
+  Solution A:
+
+  * The storage system chosen is an AWS S3 bucket.
+  * The method of automation is web scraping and web hooks using python.
+  * Web app stack is built using django.
+  * Gunicorn will be left running consistently.
+  * The server will be a small OVH VPS.
+  * The server estimated size will be tested using EC2s from AWS.
+  * All of the systems will be help in one repository.
+
+  Solution B:
+
+  * Build a desktop application or script that can be used to fetch recordings.
+  * This solution is currently in development as it adds different challanges to the storing of recordings.
+
+  Solution C:
+
+  * This would be similar to solution A but perhaps cheaper or more resources are considered.
+  * Will be updated as tools are explored.
+
+
+
+[Back to Top](#table-of-contents)
+
 ## Testing
 
+Tests to perform:
+
+  Bots:
+
+  * Automate the recordings and delete recordings accordingly on the system.
+  * Create a file system toplogy that can be used for the website to improve the UI/UX design.
+
+  FFMPEG:
+
+  * Saving an mp4 file to an s3 bucket and downloading it from the website
+  * Selecting a portion of a mp4 file from an s3 bucket and downloading.
+  
 [Back to Top](#table-of-contents)
 
 ## Bugs
