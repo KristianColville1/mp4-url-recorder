@@ -205,6 +205,9 @@ within budget and capable of quick access. The automated system should help us i
   * Will be updated as tools are explored.
 
 
+### Needs
+
+It needs to be able to store the recordings neatly inside the S3 within days 1 - 31 and the church name folders within those. The reason being it will help when the bot is able to read the folders properly. 
 
 [Back to Top](#table-of-contents)
 
@@ -241,8 +244,8 @@ Test 1 - Checking file formatting in S3 with Dollymount (clone of real stream on
   | Image / Code                                                      | Result     | Considerations | Additional |
   | ----------------------------------------------------------------- | ---------- | ------- | ------- |
   | ![test file formatting](documentation/tests/test-1-formatter.png) | I added the credentials and tested recording a stream and these are the results. Saves in multipe formats, need to decipher whats needed for FFMPEG to parse.  | Removal of additional files possibly not needed. Files definitely need to be time stamped. MP4 file only shows once the stream has stopped (or incase of 24/7 stream is stopped)  | The folder architecture of 1 - 31 days will have to be looked at as it's unclear if this can be done from the AMS server.  |
-  | ----------------------------------------------------------------- | ---------- | ------- | ------- |
-  | ----------------------------------------------------------------- | ---------- | ------- | ------- |
+  | ![test file storage](documentation/tests/test-1-storage.png) | After uploading to S3 bucket the storage goes down properly to 24.1MB, it went up as I turned it back on | local storage won't be impacted with multiple stream recording as AMS will delete files once completed and sent to S3 | This significantly reduces resource consumption on the server |
+  | ![test cpu usage](documentation/tests/test-1-cpu.png) | One stream recording and cpu is responding well. Will need a larger test peformed on the production server to gather more information but I suspect an upgrade to be possible | ------- | ------- |
   | ----------------------------------------------------------------- | ---------- | ------- | ------- |
 
 Test 2 - Creating a script to pull an mp4 file from the S3.
@@ -250,7 +253,7 @@ Test 2 - Creating a script to pull an mp4 file from the S3.
   1.
 
   | Image / Code                                                      | Result     | Considerations | Additional |
-  | ----------------------------------------------------------------- | ---------- | ------- | ------- |
+  | ![test recording](documentation/tests/test-2-recording.png) | successfully got 2 minutes of a stream using ffmpeg-python package | package is highly accessible, easy to read and small enough to parse in a few minutes. | The base structure for downloading with urls is built, however the front-end complicates the design. Needs additoinal information such as the file architure issue to be sorted. |
   | ----------------------------------------------------------------- | ---------- | ------- | ------- |
   | ----------------------------------------------------------------- | ---------- | ------- | ------- |
   | ----------------------------------------------------------------- | ---------- | ------- | ------- |
@@ -263,8 +266,8 @@ Test 2 - Creating a script to pull an mp4 file from the S3.
 
 | Issue ID | Expected Behaviour | Behaviour reported | Bug Fix |
 |---|---|---|---|
-|||||
-|||||
+|[#1]||||
+|[#3]||||
 |||||
 |||||
 |||||
@@ -329,6 +332,8 @@ Fast Forward MPEG
 (Fast Forward MPEG) An open source multimedia project for working with audio and video. Based on the "libavcodec" A/V codec library and "libavformat" multiplexing framework, FFmpeg is a command-line utility that can encode and decode a variety of media formats.
 
 It is widely used for format transcoding, basic editing (trimming and concatenation), video scaling, and video post-production effects.
+
+Originally written in C and Assembly language.
 
 [Back to Top](#table-of-contents)
 
