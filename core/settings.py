@@ -50,9 +50,18 @@ INSTALLED_APPS = [
     # custom apps
     'home',
     'advanced',
+    'django_crontab',
+    'autobot',
+]
+
+# Cron jobs
+
+CRONJOBS = [
+    ('*/5 * * * *', 'autobot.cron_job_one.send_test_email')
 ]
 
 # App settings
+
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
