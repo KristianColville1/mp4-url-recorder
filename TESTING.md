@@ -30,6 +30,8 @@ CloudFront added in front of S3 (will need to be able to go through CloudFront t
 
 ### Tests
 
+Each test is part of the larger picture and organisation of the project. This testing below in particular is to test different components of the final project. For example, each test has its alternatives. I will perform tests on each large component to be built in order to prove its useful or look for alternatives.
+
 #### Test 1
 
 - Checking file formatting in S3 with Dollymount (clone of the real stream on the testing server).
@@ -99,13 +101,15 @@ What I'm specifically testing is if I run a cronjob on a file does that file hav
 
 * Running a python script in the background continuously as a cron job - part two
 
-After an unsuccessful attempt at sending emails I've found more knowledge around how to use a cron job and why the above test was failing. Essentially it operates outside of the larger program. It needs its own SMTP configured on the operating system also.
+After an unsuccessful attempt at sending emails I've found more knowledge around how to use a cron job and why the above test was failing. Essentially it operates outside of the larger program. It needs its own SMTP configured on the operating system also in order to send emails out. When I run django it has access to all its libraries whereas the cronjob doe's behave the same way.
 
-I've decided to create a different test that can be performed in order to check that this functionality can be used in the project.
+I've decided to create a different test that can be performed in order to check that this functionality can be used in the project properly.
 
 Link to [resources](https://www.youtube.com/watch?v=aqnJvXOIr6g). 
 
-I will create a json file to store a dictionary that can be updated every minute using the cronjob. I want the data to be populated from the internet.
+I will create a json file to store a dictionary that can be updated every minute using the cronjob. I want the data to be populated from the internet which is important. I need to make sure that the script is not limited to the local environment. This is a great example as if I can populate a file and access that file from another program it proves the use case successfully.
+
+As above the front-end of the project is dependent on a scripts ability to run antintervals throughout the day.
 
 | Image/Code | Result | Considerations | Additional |
 | ---------- | ------ | -------------- | ---------- |

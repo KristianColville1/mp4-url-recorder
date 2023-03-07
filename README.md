@@ -149,12 +149,19 @@ Stream Selection
 
 ## Information Architecture
 
+Before Development:
+
 ![Basic Structure](documentation/img/basic-structure.png)
+
+During Development:
+
+![Updated Structure](documentation/img/updated-structure-topology.png)
 
 ### Database
 
 ### Data Modeling
 
+![Example Data Model Template for Recording objects](documentation/img/recording-model-template.png)
 #### Model table example
 
 | Name | Database Key | Field Type | Validation |
