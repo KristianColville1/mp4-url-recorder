@@ -57,7 +57,7 @@ INSTALLED_APPS = [
 # Cron jobs
 
 CRONJOBS = [
-    ('*/5 * * * *', 'autobot.cron_job_one.send_test_email')
+    ('*/5 * * * *', 'autobot.cron_job_one')
 ]
 
 # App settings

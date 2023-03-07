@@ -95,4 +95,21 @@ What I'm specifically testing is if I run a cronjob on a file does that file hav
 | ![Test 3 - Cron Job](documentation/tests/test-3-cronjob-part-two.png)  | I went to add the above test and used the command 'git add .' on doing so I got a notification in the terminal saying I had new mail in /var/                                                                         | Investigating the reason its here and why the other commands in the file are not executed in order to send mail |                                                                                                                                                                                            |
 | ![Test 3 - Cron Job](documentation/tests/test-3-cronjob-executing.png) | The cronjob appears to be executing every 5 minutes as requested. I need to look at how cronjob is executing parameters. If this works properly an can read & execute properly I will have solved major design issues | This needs to work as the entire application will be dependent on tasks being automated.                        | Once completed the tasks will be easier to arrange and proof of concept will be much easier and I can begin designing the topology and solving the file architecture issue using cronjobs. |
 
+#### Test 4
+
+* Running a python script in the background continuously as a cron job - part two
+
+After an unsuccessful attempt at sending emails I've found more knowledge around how to use a cron job and why the above test was failing. Essentially it operates outside of the larger program. It needs its own SMTP configured on the operating system also.
+
+I've decided to create a different test that can be performed in order to check that this functionality can be used in the project.
+
+Link to [resources](https://www.youtube.com/watch?v=aqnJvXOIr6g). 
+
+I will create a json file to store a dictionary that can be updated every minute using the cronjob. I want the data to be populated from the internet.
+
+| Image/Code | Result | Considerations | Additional |
+| ---------- | ------ | -------------- | ---------- |
+|            |        |                |            |
+|            |        |                |            |
+
 [Back to Top](#table-of-contents)
