@@ -2,7 +2,6 @@
 
 Project Owners: Kristian Colville, Declan O'Sullivan
 
-
 <h2>Link here</h2>
 
 <br>
@@ -41,12 +40,11 @@ Project Owners: Kristian Colville, Declan O'Sullivan
   * [Production Server Guide](#production-server-guide)
 * [Definitions](#definitions)
 
-
 ## Project Goals
 
-Build a web application capable of selecting an MP4 recording from an AWS S3. The web application should be capable of using FFMPEG to select a portion of an MP4 file for download. The web application should be user-friendly and have minimalist features to enable a quick and easy user experience. 
+Build a web application capable of selecting an MP4 recording from an AWS S3. The web application should be capable of using FFMPEG to select a portion of an MP4 file for download. The web application should be user-friendly and have minimalist features to enable a quick and easy user experience.
 
-The web application could also possibly upload the content directly to Vimeo to reduce the time spent using the web application. 
+The web application could also possibly upload the content directly to Vimeo to reduce the time spent using the web application.
 
 ### User Goals
 
@@ -61,12 +59,13 @@ The web application should be straightforward to use so that anyone performing t
 - Build a powerful web application capable of performing CRUD functionality along with advanced programming capabilities.
 - Using FFMPEG select a portion of a file from a request header and use that to chop a selection so it can be given to a customer when requested.
 - Take the burden of storage for camera recordings to increase potential availability and revenue.
-Increase the reliability of the service.
+  Increase the reliability of the service.
 - Run the web application smoothly so advertising can commence on the product.
 
 [Back to Top](#table-of-contents)
 
 ## User Experience
+
 ### Target Audience
 
 Any staff member tasked with collecting a recording and giving the result to the customer.
@@ -90,33 +89,38 @@ User roles:
     Site Owner
 
 | Issue ID | User Story |
-|---|---|
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
-|||
+| -------- | ---------- |
+|          |            |
+|          |            |
+|          |            |
+|          |            |
+|          |            |
+|          |            |
+|          |            |
+|          |            |
+|          |            |
+|          |            |
+|          |            |
+|          |            |
+|          |            |
+|          |            |
 
 [Back to Top](#table-of-contents)
 
 ## Agile Methodology
+
 ### Epics
 
 [Back to Top](#table-of-contents)
 
 ## Design
+
 ### Color Scheme
+
 ### Typography
+
 ### Structure
+
 #### Wireframes
 
 Home page
@@ -127,15 +131,18 @@ Streams page
 
 ![streams](documentation/img/wireframe-streams.png)
 
-Stream Selection 
+Stream Selection
 
 ![Stream Selection](documentation/img/wireframe-stream-selection.png)
 
 [Back to Top](#table-of-contents)
 
 ## Business Model
+
 ### Goals
+
 ### Target Audience
+
 ### Strategy
 
 [Back to Top](#table-of-contents)
@@ -145,19 +152,21 @@ Stream Selection
 ![Basic Structure](documentation/img/basic-structure.png)
 
 ### Database
+
 ### Data Modeling
 
 #### Model table example
+
 | Name | Database Key | Field Type | Validation |
-|---|---|---|---|
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
+| ---- | ------------ | ---------- | ---------- |
+|      |              |            |            |
+|      |              |            |            |
+|      |              |            |            |
+|      |              |            |            |
+|      |              |            |            |
+|      |              |            |            |
+|      |              |            |            |
+|      |              |            |            |
 
 [Back to Top](#table-of-contents)
 
@@ -179,35 +188,34 @@ The product can be easily more reliable and viable if we take the responsibility
 
 ### Goal Reminder
 
-Built a web app and a method of automation that can store and manage recordings. The storage system needs to be 
+Built a web app and a method of automation that can store and manage recordings. The storage system needs to be
 within budget and capable of quick access. The automated system should help us identify recordings from the front-end of the web app.
 
 ### Possible topologies and solutions
 
   Solution A:
 
-  * The storage system chosen is an AWS S3 bucket.
-  * The method of automation is web scraping and web hooks using python.
-  * Web app stack is built using django.
-  * Gunicorn will be left running consistently.
-  * The server will be a small OVH VPS.
-  * The server estimated size will be tested using EC2s from AWS.
-  * All of the systems will be help in one repository.
+* The storage system chosen is an AWS S3 bucket.
+* The method of automation is web scraping and web hooks using python.
+* Web app stack is built using django.
+* Gunicorn will be left running consistently.
+* The server will be a small OVH VPS.
+* The server estimated size will be tested using EC2s from AWS.
+* All of the systems will be help in one repository.
 
   Solution B:
 
-  * Build a desktop application or script that can be used to fetch recordings.
-  * This solution is currently in development as it adds different challanges to the storing of recordings.
+* Build a desktop application or script that can be used to fetch recordings.
+* This solution is currently in development as it adds different challanges to the storing of recordings.
 
   Solution C:
 
-  * This would be similar to solution A
-  * Probably need to use boto3 instead of python bot for manipulating objects in S3
-
+* This would be similar to solution A
+* Probably need to use boto3 instead of python bot for manipulating objects in S3
 
 ### Needs
 
-It needs to be able to store the recordings neatly inside the S3 within days 1 - 31 and the church name folders within those. The reason being it will help when the bot is able to read the folders properly. 
+It needs to be able to store the recordings neatly inside the S3 within days 1 - 31 and the church name folders within those. The reason being it will help when the bot is able to read the folders properly.
 
 [Back to Top](#table-of-contents)
 
@@ -217,46 +225,47 @@ Large Tests to Perform:
 
   Bots:
 
-  * Automate the recordings and delete recordings accordingly on the system.
-  * Create a file system toplogy that can be used for the website to improve the UI/UX design.
+* Automate the recordings and delete recordings accordingly on the system.
+* Create a file system toplogy that can be used for the website to improve the UI/UX design.
 
   FFMPEG:
 
-  * Saving an mp4 file to an s3 bucket and downloading it from the website
-  * Selecting a portion of a mp4 file from an s3 bucket and downloading.
+* Saving an mp4 file to an s3 bucket and downloading it from the website
+* Selecting a portion of a mp4 file from an s3 bucket and downloading.
 
 ### Challenges
 
- * File storage
- * Recording 24/7 hr streams
- * Automation
- * FFMPEG use on HTML headers
- * Data translation from file storage to the Front-End
- * Cloudfront added infront of S3 (will need to be able go through cloudfront to get data)
+* File storage
+* Recording 24/7 hr streams
+* Automation
+* FFMPEG use on HTML headers
+* Data translation from file storage to the Front-End
+* Cloudfront added infront of S3 (will need to be able go through cloudfront to get data)
 
-#### Tests
+### Tests
 
-##### Test 1 - Checking file formatting in S3 with Dollymount (clone of real stream on testing server).
+#### Test 1
+
+- Checking file formatting in S3 with Dollymount (clone of real stream on testing server).
 
   1. Created an S3 bucket and EC2 with AntMediaServer installed.
   2. Added S3 bucket credentials to the AMS server.
 
-  | Image / Code                                                      | Result     | Considerations | Additional |
-  | ----------------------------------------------------------------- | ---------- | ------- | ------- |
-  | ![test file formatting](documentation/tests/test-1-formatter.png) | I added the credentials and tested recording a stream and these are the results. Saves in multipe formats, need to decipher whats needed for FFMPEG to parse.  | Removal of additional files possibly not needed. Files definitely need to be time stamped. MP4 file only shows once the stream has stopped (or incase of 24/7 stream is stopped)  | The folder architecture of 1 - 31 days will have to be looked at as it's unclear if this can be done from the AMS server.  |
-  | ![test file storage](documentation/tests/test-1-storage.png) | After uploading to S3 bucket the storage goes down properly to 24.1MB, it went up as I turned it back on | local storage won't be impacted with multiple stream recording as AMS will delete files once completed and sent to S3 | This significantly reduces resource consumption on the server |
-  | ![test cpu usage](documentation/tests/test-1-cpu.png) | One stream recording and cpu is responding well. Will need a larger test peformed on the production server to gather more information but I suspect an upgrade to be possible... | ------- | ------- |
+  | Image / Code                                                    | Result                                                                                                                                                                           | Considerations                                                                                                                                                                   | Additional                                                                                                                |
+  | --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+  | ![test file formatting](documentation/tests/test-1-formatter.png) | I added the credentials and tested recording a stream and these are the results. Saves in multipe formats, need to decipher whats needed for FFMPEG to parse.                    | Removal of additional files possibly not needed. Files definitely need to be time stamped. MP4 file only shows once the stream has stopped (or incase of 24/7 stream is stopped) | The folder architecture of 1 - 31 days will have to be looked at as it's unclear if this can be done from the AMS server. |
+  | ![test file storage](documentation/tests/test-1-storage.png)      | After uploading to S3 bucket the storage goes down properly to 24.1MB, it went up as I turned it back on                                                                         | local storage won't be impacted with multiple stream recording as AMS will delete files once completed and sent to S3                                                            | This significantly reduces resource consumption on the server                                                             |
+  | ![test cpu usage](documentation/tests/test-1-cpu.png)             | One stream recording and cpu is responding well. Will need a larger test peformed on the production server to gather more information but I suspect an upgrade to be possible... | -------                                                                                                                                                                          | -------                                                                                                                   |
 
+#### Test 2
 
-##### Test 2 - Creating a script to pull an mp4 file from the S3.
-
-  1.
-
-  | Image / Code                                                      | Result     | Considerations | Additional |
-  | ----------------------------------------------------------------- | ---------- | ------- | ------- |
+- Creating a script to pull an mp4 file from the S3.
+  | Image / Code                                              | Result                                                             | Considerations                                                                         | Additional                                                                                                                                                                       |
+  | --------------------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
   | ![test recording](documentation/tests/test-2-recording.png) | successfully got 2 minutes of a stream using ffmpeg-python package | package is highly accessible, easy to read and small enough to parse in a few minutes. | The base structure for downloading with urls is built, however the front-end complicates the design. Needs additoinal information such as the file architure issue to be sorted. |
 
 Example code written.
+
 ```
 FROM = '00:00:00'
 TO = '00:02:00'
@@ -271,16 +280,17 @@ Well it means the meta data we need is attached to the mp4 file and that's excel
 
 It also means we don't need to download the whole file each time we need a selection from an mp4 file.
 
+#### Test 3
 
-##### Test 3 - Running a python script in the background continously as a cron job
+- Running a python script in the background continously as a cron job
 
-link to material for cronjob [here](https://medium.com/analytics-vidhya/easiest-way-to-run-a-python-script-in-the-background-4aada206cf29#:~:text=The%20easiest%20way%20of%20running,can%20use%20Windows%20Task%20Scheduler.&text=You%20can%20then%20give%20the,by%20giving%20the%20time%20particulars.).
+Link to material for cronjob [here](https://medium.com/analytics-vidhya/easiest-way-to-run-a-python-script-in-the-background-4aada206cf29#:~:text=The%20easiest%20way%20of%20running,can%20use%20Windows%20Task%20Scheduler.&text=You%20can%20then%20give%20the,by%20giving%20the%20time%20particulars.).
 
-This test includes writing a script to send an email every 5 minutes to a new email address. By running it constantly we can help prove this functionality and consider it on features of the project. Specifically the automation elements requiring moving of file and updating a front-end database.
+This test includes writing a script to send an email every 5 minutes to a new email address. By running it constantly we can help prove this functionality and consider it on features of the project. Specifically the automation elements requiring moving of files and updating a front-end database.
 
-Each test will help prove the functionality for each of features as whole in the project.
+Each test will help prove the functionality for each of features as a whole in the project.
 
-Cronjobs are processes that run in the background and they specifiy how often to run each process that's created as a cronjob. 
+Cronjobs are processes that run in the background and they specifiy how often to run each process that's created as a cronjob.
 
 ![Test 3 - Cron Job](documentation/tests/test-3-cronjob.png)
 
@@ -288,24 +298,24 @@ Cronjobs are processes that run in the background and they specifiy how often to
 
 ## Bugs
 
-| Issue ID | Expected Behaviour | Behaviour reported | Bug Fix |
-|---|---|---|---|
-|[#1](https://github.com/KristianColville1/mp4-url-recorder/issues/1)|S3 mounting to production server and the streams sending files to the churchcamlive-recordings directory.|Broken directory, symlink broken when recording.| working on an alternate solution externally|
-|[#3](https://github.com/KristianColville1/mp4-url-recorder/issues/3)|Naming of folders to be /day-one/church-name/name_of_file.mp4|Naming of folders is set and will be /streams/name_of_file.mp4. Bad because it complicates the rest of the web application. Needs to be sorted asap for development purposes.||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
-|||||
+| Issue ID                                                          | Expected Behaviour                                                                                        | Behaviour reported                                                                                                                                                            | Bug Fix                                     |
+| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| [#1](https://github.com/KristianColville1/mp4-url-recorder/issues/1) | S3 mounting to production server and the streams sending files to the churchcamlive-recordings directory. | Broken directory, symlink broken when recording.                                                                                                                              | working on an alternate solution externally |
+| [#3](https://github.com/KristianColville1/mp4-url-recorder/issues/3) | Naming of folders to be /day-one/church-name/name_of_file.mp4                                             | Naming of folders is set and will be /streams/name_of_file.mp4. Bad because it complicates the rest of the web application. Needs to be sorted asap for development purposes. |                                             |
+|                                                                   |                                                                                                           |                                                                                                                                                                               |                                             |
+|                                                                   |                                                                                                           |                                                                                                                                                                               |                                             |
+|                                                                   |                                                                                                           |                                                                                                                                                                               |                                             |
+|                                                                   |                                                                                                           |                                                                                                                                                                               |                                             |
+|                                                                   |                                                                                                           |                                                                                                                                                                               |                                             |
+|                                                                   |                                                                                                           |                                                                                                                                                                               |                                             |
+|                                                                   |                                                                                                           |                                                                                                                                                                               |                                             |
+|                                                                   |                                                                                                           |                                                                                                                                                                               |                                             |
+|                                                                   |                                                                                                           |                                                                                                                                                                               |                                             |
+|                                                                   |                                                                                                           |                                                                                                                                                                               |                                             |
+|                                                                   |                                                                                                           |                                                                                                                                                                               |                                             |
+|                                                                   |                                                                                                           |                                                                                                                                                                               |                                             |
+|                                                                   |                                                                                                           |                                                                                                                                                                               |                                             |
+|                                                                   |                                                                                                           |                                                                                                                                                                               |                                             |
 
 [Back to Top](#table-of-contents)
 
@@ -319,6 +329,7 @@ Cronjobs are processes that run in the background and they specifiy how often to
 [Back to Top](#table-of-contents)
 
 ## Development & Deployment
+
 ### Version Control
 
 I used [Visual Studio Code](https://code.visualstudio.com/) as a local repository and IDE & [GitHub](https://github.com/) as a remote repository.
@@ -330,9 +341,9 @@ I used [Visual Studio Code](https://code.visualstudio.com/) as a local repositor
 5. To push my newly created files to GitHub I used the terminal by pressing Ctrl + shift + `.
 6. A new terminal opened and then I used the below steps.
 
-    - git add (name of the file) *This selects the file for the commit*
-    - git commit -m "Commit message: (i.e. Initial commit)" *Allows the developer to assign a specific concise statement to the commit*
-    - git push *The final command sends the code to GitHub*
+   - git add (name of the file) *This selects the file for the commit*
+   - git commit -m "Commit message: (i.e. Initial commit)" *Allows the developer to assign a specific concise statement to the commit*
+   - git push *The final command sends the code to GitHub*
 
 ### AWS
 
@@ -361,4 +372,3 @@ It is widely used for format transcoding, basic editing (trimming and concatenat
 Originally written in C and Assembly language.
 
 [Back to Top](#table-of-contents)
-
