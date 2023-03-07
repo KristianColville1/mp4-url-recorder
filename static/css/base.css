@@ -188,6 +188,9 @@ footer {
     background-color: gray;
 }
 
+.apps {
+    width: 200px;
+}
 @media only screen and (max-width: 991px) {
     nav div ul a.dropdown-toggle {
         margin-top: 60px;

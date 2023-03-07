@@ -201,8 +201,8 @@ within budget and capable of quick access. The automated system should help us i
 
   Solution C:
 
-  * This would be similar to solution A but perhaps cheaper or more resources are considered.
-  * Will be updated as tools are explored.
+  * This would be similar to solution A
+  * Probably need to use boto3 instead of python bot for manipulating objects in S3
 
 
 ### Needs
@@ -236,7 +236,7 @@ Large Tests to Perform:
 
 #### Tests
 
-Test 1 - Checking file formatting in S3 with Dollymount (clone of real stream on testing server).
+##### Test 1 - Checking file formatting in S3 with Dollymount (clone of real stream on testing server).
 
   1. Created an S3 bucket and EC2 with AntMediaServer installed.
   2. Added S3 bucket credentials to the AMS server.
@@ -248,7 +248,7 @@ Test 1 - Checking file formatting in S3 with Dollymount (clone of real stream on
   | ![test cpu usage](documentation/tests/test-1-cpu.png) | One stream recording and cpu is responding well. Will need a larger test peformed on the production server to gather more information but I suspect an upgrade to be possible... | ------- | ------- |
 
 
-Test 2 - Creating a script to pull an mp4 file from the S3.
+##### Test 2 - Creating a script to pull an mp4 file from the S3.
 
   1.
 
@@ -270,6 +270,19 @@ What does this mean?
 Well it means the meta data we need is attached to the mp4 file and that's excellent in getting the recordings. This code can be adapted to calculate the time difference. The total time of the file will need to extracted in order to help determine ranges for the user to trim.
 
 It also means we don't need to download the whole file each time we need a selection from an mp4 file.
+
+
+##### Test 3 - Running a python script in the background continously as a cron job
+
+link to material for cronjob [here](https://medium.com/analytics-vidhya/easiest-way-to-run-a-python-script-in-the-background-4aada206cf29#:~:text=The%20easiest%20way%20of%20running,can%20use%20Windows%20Task%20Scheduler.&text=You%20can%20then%20give%20the,by%20giving%20the%20time%20particulars.).
+
+This test includes writing a script to send an email every 5 minutes to a new email address. By running it constantly we can help prove this functionality and consider it on features of the project. Specifically the automation elements requiring moving of file and updating a front-end database.
+
+Each test will help prove the functionality for each of features as whole in the project.
+
+Cronjobs are processes that run in the background and they specifiy how often to run each process that's created as a cronjob. 
+
+![Test 3 - Cron Job](documentation/tests/test-3-cronjob.png)
 
 [Back to Top](#table-of-contents)
 
