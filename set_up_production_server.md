@@ -6,7 +6,6 @@
 * [Options](#options)
 * [Solutions](#solutions)
 
-
 After the first experience with setting up the recording capability on the production server it failed to work properly and caused disruptions.
 
 ### Reasons
@@ -25,7 +24,7 @@ Set up a new development server to avoid disruptions.
 
 ### Solutions
 
-Build EC2 to replicate production server.
+Build EC2 to replicate production server and test components.
 
 Closest build and cost:
 t3.large
@@ -45,6 +44,4 @@ Turn off production server in between tests.
 5. Check data is inside the S3.
 6. Build the python project to collect the stream using ffmpeg.
 7. Record all steps and changes made for replication on production server.
-
-### 
-
+8. Visit the testing documentation for updates on components tested.

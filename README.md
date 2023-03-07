@@ -284,7 +284,7 @@ Please refer to the documentation [here](AWS_S3.md) for the guide on building AW
 
 ### Production Server Guide
 
-[Please follow this link to the guide](set_up_production_server.md)
+Please follow this link to the [guide](set_up_production_server.md) for adding everything to the production server.
 
 [Back to Top](#table-of-contents)
 
