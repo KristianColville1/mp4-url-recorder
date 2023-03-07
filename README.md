@@ -177,36 +177,35 @@ Stream Selection
 ## Solutions
 
 Overview of the problem:
-
-Currently it is difficult to obtain recordings from our primary source as they are typically overwritten.
+Currently, it is difficult to obtain recordings from our primary source as they are typically overwritten.
 
 We want the recordings as these hold value and we can sell the recordings.
 
 We cannot advertise our product as the product is unreliable on our end.
 
-The product can be easily more reliable and viable if we take the responsibility on to ourselves and obtain the recordings through our own storage systems.
+The product can be easily more reliable and viable if we take responsibility for ourselves and obtain the recordings through our storage systems.
 
 ### Goal Reminder
 
 Built a web app and a method of automation that can store and manage recordings. The storage system needs to be
-within budget and capable of quick access. The automated system should help us identify recordings from the front-end of the web app.
+within budget and capable of quick access. The automated system should help us identify recordings from the front end of the web app.
 
 ### Possible topologies and solutions
 
   Solution A:
 
 * The storage system chosen is an AWS S3 bucket.
-* The method of automation is web scraping and web hooks using python.
-* Web app stack is built using django.
+* The method of automation is web scraping and webhooks using python.
+* The web app stack is built using Django.
 * Gunicorn will be left running consistently.
 * The server will be a small OVH VPS.
-* The server estimated size will be tested using EC2s from AWS.
-* All of the systems will be help in one repository.
+* The server's estimated size will be tested using EC2s from AWS.
+* All of the systems will be held in one repository.
 
   Solution B:
 
 * Build a desktop application or script that can be used to fetch recordings.
-* This solution is currently in development as it adds different challanges to the storing of recordings.
+* This solution is currently in development as it adds different challenges to the storing of recordings.
 
   Solution C:
 
@@ -226,12 +225,12 @@ Large Tests to Perform:
   Bots:
 
 * Automate the recordings and delete recordings accordingly on the system.
-* Create a file system toplogy that can be used for the website to improve the UI/UX design.
+* Create a file system topology that can be used for the website to improve the UI/UX design.
 
   FFMPEG:
 
 * Saving an mp4 file to an s3 bucket and downloading it from the website
-* Selecting a portion of a mp4 file from an s3 bucket and downloading.
+* Selecting a portion of an mp4 file from an s3 bucket and downloading.
 
 ### Challenges
 
@@ -240,13 +239,13 @@ Large Tests to Perform:
 * Automation
 * FFMPEG use on HTML headers
 * Data translation from file storage to the Front-End
-* Cloudfront added infront of S3 (will need to be able go through cloudfront to get data)
+CloudFront added in front of S3 (will need to be able to go through CloudFront to get data)
 
 ### Tests
 
 #### Test 1
 
-- Checking file formatting in S3 with Dollymount (clone of real stream on testing server).
+- Checking file formatting in S3 with Dollymount (clone of the real stream on the testing server).
 
   1. Created an S3 bucket and EC2 with AntMediaServer installed.
   2. Added S3 bucket credentials to the AMS server.
@@ -262,9 +261,10 @@ Large Tests to Perform:
 - Creating a script to pull an mp4 file from the S3.
   | Image / Code                                              | Result                                                             | Considerations                                                                         | Additional                                                                                                                                                                       |
   | --------------------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | ![test recording](documentation/tests/test-2-recording.png) | successfully got 2 minutes of a stream using ffmpeg-python package | package is highly accessible, easy to read and small enough to parse in a few minutes. | The base structure for downloading with urls is built, however the front-end complicates the design. Needs additoinal information such as the file architure issue to be sorted. |
+  | ![test recording](documentation/tests/test-2-recording.png) | successfully got 2 minutes of a stream using ffmpeg-python package | package is highly accessible, easy to read and small enough to parse in a few minutes. | The base structure for downloading with URLs is built, however, the front end complicates the design. Needs additional information such as the file architecture issue to be sorted. |
 
-Example code written.
+
+An example code is written below.
 
 ```
 FROM = '00:00:00'
@@ -275,24 +275,27 @@ ffmpeg.input(url_to_download, ss=FROM, t=TO).output(
 ```
 
 What does this mean?
-
-Well it means the meta data we need is attached to the mp4 file and that's excellent in getting the recordings. This code can be adapted to calculate the time difference. The total time of the file will need to extracted in order to help determine ranges for the user to trim.
+Well, it means the metadata we need is attached to the mp4 file and that's excellent for getting the recordings. This code can be adapted to calculate the time difference. The total time of the file will need to extract to help determine ranges for the user to trim.
 
 It also means we don't need to download the whole file each time we need a selection from an mp4 file.
 
 #### Test 3
 
-- Running a python script in the background continously as a cron job
+- Running a python script in the background continuously as a cron job
 
 Link to material for cronjob [here](https://medium.com/analytics-vidhya/easiest-way-to-run-a-python-script-in-the-background-4aada206cf29#:~:text=The%20easiest%20way%20of%20running,can%20use%20Windows%20Task%20Scheduler.&text=You%20can%20then%20give%20the,by%20giving%20the%20time%20particulars.).
 
-This test includes writing a script to send an email every 5 minutes to a new email address. By running it constantly we can help prove this functionality and consider it on features of the project. Specifically the automation elements requiring moving of files and updating a front-end database.
+This test includes writing a script to send an email every 5 minutes to a new email address. By running it constantly we can help prove this functionality and consider it as the feature of the project. Specifically, the automation elements require moving files and updating a front-end database.
 
-Each test will help prove the functionality for each of features as a whole in the project.
+Each test will help prove the functionality of each feature as a whole in the project.
 
-Cronjobs are processes that run in the background and they specifiy how often to run each process that's created as a cronjob.
+Cronjobs are processes that run in the background and they specify how often to run each process that's created as a cronjob.
+
+
 
 ![Test 3 - Cron Job](documentation/tests/test-3-cronjob.png)
+
+What I'm specifically testing is if I run a cronjob on a file does that file have access to the rest of the files in that folder. We can test this by creating a script and importing another file in the same directory to perform actions on. For example, sending emails.
 
 [Back to Top](#table-of-contents)
 
@@ -324,7 +327,7 @@ Cronjobs are processes that run in the background and they specifiy how often to
 - [Amazon Web Services EC2](https://aws.amazon.com)
 - [Mockplus](https://mockplus.com) for wireframing.
 - [VSCode](https://vscode.com) for testing and development.
-- [FFMPEG Python](https://pypi.org/project/ffmpeg-python/) not to be confused with the reverse package of the same name, used for fetching and trimming recordings.
+[FFMPEG Python](https://pypi.org/project/ffmpeg-python/) is not to be confused with the reverse package of the same name, used for fetching and trimming recordings.
 
 [Back to Top](#table-of-contents)
 
@@ -334,7 +337,7 @@ Cronjobs are processes that run in the background and they specifiy how often to
 
 I used [Visual Studio Code](https://code.visualstudio.com/) as a local repository and IDE & [GitHub](https://github.com/) as a remote repository.
 
-1. Firstly, I needed to create a new repository on Github [mp4-url-recorder](https://github.com/KristianColville1/mp4-url-recorder).
+1. Firstly, I needed to create a new repository on GitHub [mp4-url-recorder](https://github.com/KristianColville1/mp4-url-recorder).
 2. I opened that repository on my local machine by copying the URL from that repository and cloning it from my IDE for use.
 3. Visual Studio Code opened a new workspace for me.
 4. I created files and folders to use.
@@ -359,13 +362,13 @@ I used [Visual Studio Code](https://code.visualstudio.com/) as a local repositor
 
 A file with the M3U8 file extension is a UTF-8 Encoded Audio Playlist file. They are plain text files that can be used by both audio and video players to describe where media files are located. They essentially point to the file or files that hold the requested content.
 
-The file can use absolute paths, relative paths, and URLs to refer to specific media files and/or entire folders of media files. Other information in the file might be comments that describe the contents.
+The file can use absolute paths, relative paths, and URLs to refer to specific media files and/or entire folders of media files. Other information in the file might comment that describes the contents.
 
 #### FFMPEG:
 
 Fast Forward MPEG
 
-(Fast Forward MPEG) An open source multimedia project for working with audio and video. Based on the "libavcodec" A/V codec library and "libavformat" multiplexing framework, FFmpeg is a command-line utility that can encode and decode a variety of media formats.
+(Fast Forward MPEG) An open-source multimedia project for working with audio and video. Based on the "libavcodec" A/V codec library and "libavformat" multiplexing framework, FFmpeg is a command-line utility that can encode and decode a variety of media formats.
 
 It is widely used for format transcoding, basic editing (trimming and concatenation), video scaling, and video post-production effects.
 
