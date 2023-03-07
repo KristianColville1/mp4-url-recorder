@@ -162,6 +162,7 @@ During Development:
 ### Data Modeling
 
 ![Example Data Model Template for Recording objects](documentation/img/recording-model-template.png)
+
 #### Model table example
 
 | Name | Database Key | Field Type | Validation |
