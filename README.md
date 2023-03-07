@@ -452,7 +452,7 @@ Open a separate tab and navigate to the S3 dashboard and then to your bucket and
 
 22. We have now completed our set-up for our S3 bucket and we need to download the .csv file for our access key and secret access key. You can also copy those from here to put in your project
 
-![AWS](documentation/readme_folder/user-permissions-4.png)
+![AWS](documentation/img/aws/user-permissions-4.png)
 
 23. As a final mention, you must install boto3 and django-storages to use your S3 bucket with Python. Example below.
 
@@ -480,7 +480,7 @@ Open a separate tab and navigate to the S3 dashboard and then to your bucket and
 
 - You will also need to configure Django to use your S3 bucket so create a file as below and place it in the main project directory
 
-![AWS](documentation/readme_folder/custom-storage.png)
+![AWS](documentation/img/aws//custom-storage.png)
 
 ### Production Server Guide
 
