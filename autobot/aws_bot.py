@@ -21,6 +21,6 @@ aws_pass = os.environ.get("AWS_PASS")
 
 # Fill credentials
 browser.find_element_by_class_name('aws-signin-textfield')
-browser.find_element_by_name(“pass”).send_keys(fb_pass)
+# browser.find_element_by_name(“pass”).send_keys(fb_pass)
 # Click Log In
 browser.find_element_by_id('loginbutton').click();
