@@ -137,6 +137,15 @@ Stream Selection
 
 ![Stream Selection](documentation/img/wireframe-stream-selection.png)
 
+#### Components
+
+##### S3
+
+| Image                                                   | Information   | Considerations                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------------------------------------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![S3 Design](documentation/img/s3-data-transfer.png)      | Data Transfer | We currently have a file architecture issue<br />I am researching using AWS Lambdas<br />in order to sort the data properly. <br />Click here for [resources](https://stackoverflow.com/questions/74324422/automatically-move-object-from-one-s3-bucket-to-another) for lambdas. <br />Click here for [resources](https://stackoverflow.com/questions/30161700/move-files-between-two-aws-s3-buckets-using-boto3) on boto3. |
+| ![S3 Architecture](documentation/img/s3-architecture.png) | File paths    | Essentially an S3 is flat meaning it has no<br />file paths.<br />Instead it uses artificial methods to give<br />the illusion of depth.<br />To create file paths objects need to be <br />added with the /foldername/file-name.txt<br />Harder to work with as its essentially just <br />a dictionary with key value pairs to store<br />information.                                                            |
+
 [Back to Top](#table-of-contents)
 
 ## Business Model
