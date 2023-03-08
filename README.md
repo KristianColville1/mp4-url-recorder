@@ -121,6 +121,8 @@ User roles:
 
 ### Structure
 
+![High Level Abstract Flowchart](documentation/img/high-abstract-fowchart.png)
+
 #### Wireframes
 
 Home page
@@ -257,7 +259,7 @@ Please go to the testing [documentation.](TESTING.md)
 - [Mockplus](https://mockplus.com) for wireframing.
 - [VSCode](https://vscode.com) for testing and development.
   [FFMPEG Python](https://pypi.org/project/ffmpeg-python/) is not to be confused with the reverse package of the same name, used for fetching and trimming recordings.
-- [Django APScheduler](https://github.com/jcass77/django-apscheduler) is a package that enables storing persistent jobs in the database using Django's ORM.
+- [APScheduler](https://pypi.org/project/APScheduler/) is a package that enables storing persistent jobs in the database using Django's ORM.
 
 [Back to Top](#table-of-contents)
 
