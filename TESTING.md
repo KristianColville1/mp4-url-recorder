@@ -111,10 +111,10 @@ I will create a json file to store a dictionary that can be updated every minute
 
 As above the front-end of the project is dependent on a scripts ability to run antintervals throughout the day.
 
-| Image/Code | Result | Considerations | Additional |
-| ---------- | ------ | -------------- | ---------- |
-|            |        |                |            |
-|            |        |                |            |
+| Image/Code    | Result                                                                                                                                                                                                      | Considerations                                                                                                                                                                                                                                       | Additional |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| Failure       | Immense difficulty getting django-crontab to work properly locally                                                                                                                                          | I have an alternative package that uses an API to schedule events, I'm considering this as an alternative. Recommendations online suggest people having similiar diffculty using cronjobs with django, using the suggested package for another test. |            |
+| Small success | I have found an even better alternative than I thought. The package I'm using can be initiated on start up. This is great as once gunicorn is configured to run constantly the process will run inevitably. | The package requires more django knowledge on manipulating the app files and making sure inheritence is correctly followed for it to run properly. Researching the package and Django specific rules on this behaviour.                              |            |
 
 #### Test 5
 
