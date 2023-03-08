@@ -200,29 +200,31 @@ The product can be easily more reliable and viable if we take responsibility for
 Built a web app and a method of automation that can store and manage recordings. The storage system needs to be
 within budget and capable of quick access. The automated system should help us identify recordings from the front end of the web app.
 
-### Possible topologies and solutions
-
-  Solution A:
-
-* The storage system chosen is an AWS S3 bucket.
-* The method of automation is web scraping and webhooks using python.
-* The web app stack is built using Django.
-* Gunicorn will be left running consistently.
-* The server will be a small OVH VPS.
-* The server's estimated size will be tested using EC2s from AWS.
-* All of the systems will be held in one repository.
-
-  Solution B:
-* Build a desktop application or script that can be used to fetch recordings.
-* This solution is currently in development as it adds different challenges to the storing of recordings.
-
-  Solution C:
-* This would be similar to solution A
-* Probably need to use boto3 instead of python bot for manipulating objects in S3
-
 ### Needs
 
 It needs to be able to store the recordings neatly inside the S3 within days 1 - 31 and the church name folders within those. The reason being it will help when the bot is able to read the folders properly.
+
+### Solutions
+
+#### Antmedia Server
+
+A bot can be used to turn off the streams that are on 24/7. The bot will wait 2 minutes and then turn them back on. This is to enable the transfer of a recording to the S3 bucket.
+
+#### CloudFront & S3
+
+These services are activated and working properly. To use the S3 effectively and get the free tier of transfer allowence cloudfront is used in front of the S3 when requesting data. I have allowed access to the S3 externally so that AntMediaServer can send recordings directly to the storage system.
+
+#### FFMPEG & Recording
+
+I built a test and proved that it is possible to download from the S3 directly and through CloudFront. You can also download a specific selection. The option also exists here to get additional data from an MP4 file such as duration and other headers available in the request.
+
+#### Downloading from Website
+
+This is more complicated as it will likely need to be attached to a database model and then access will need to granted inorder to download it through a link. I am keeping the Vimeo API option there incase this might be easier to send directly to the end destination.
+
+#### Database & Front-End
+
+Once the file architecture is sorted in the S3 I will be able to create a complex algorithm to parse through the data and update a local database on the production server that will store the models and they will be viewable from the front-end. It will help us parse through the files quicker and download content faster. I'm currently investigating options for this functionality.
 
 [Back to Top](#table-of-contents)
 
