@@ -105,7 +105,7 @@ After an unsuccessful attempt at sending emails I've found more knowledge around
 
 I've decided to create a different test that can be performed in order to check that this functionality can be used in the project properly.
 
-Link to [resources](https://www.youtube.com/watch?v=aqnJvXOIr6g). 
+Link to [resources](https://www.youtube.com/watch?v=aqnJvXOIr6g).
 
 I will create a json file to store a dictionary that can be updated every minute using the cronjob. I want the data to be populated from the internet which is important. I need to make sure that the script is not limited to the local environment. This is a great example as if I can populate a file and access that file from another program it proves the use case successfully.
 
@@ -115,5 +115,17 @@ As above the front-end of the project is dependent on a scripts ability to run a
 | ---------- | ------ | -------------- | ---------- |
 |            |        |                |            |
 |            |        |                |            |
+
+#### Test 5
+
+* Passing objects from the S3 through CloudFront
+
+Very important that we can advantage of the free tier for 1TB of data transer out of our S3. Allows us to save money and focus on storage costs.
+
+| Image/Code                                                  | Result                                                             | Considerations                                                                  | Additional |
+| ----------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------- | ---------- |
+| ![Cloudfront](documentation/tests/test-5-cloudfront.png)      | I successfully transfered data from the S3<br />through cloudfront |                                                                                 |            |
+| ![Cloudfront](documentation/tests/test-5-cloudfront-code.png) | Example test code                                                  | Issue with environment<br />variables but moved it to top directory for testing |            |
+| ![Cloudfront](documentation/tests/test-5-cloudfront-file.png) | Creates the file as shown 'test.mp4'                               |                                                                                 |            |
 
 [Back to Top](#table-of-contents)

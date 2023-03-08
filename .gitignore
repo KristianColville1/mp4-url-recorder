@@ -5,3 +5,5 @@ test.mp4
 test.json
 staticfiles/
 db.sqlite3
+vars.env
+recorder.py
