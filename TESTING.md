@@ -51,10 +51,11 @@ Each test is part of the larger picture and organisation of the project. This te
 
 #### Test 2
 
-- Creating a script to pull an mp4 file from the S3.| Image/Code                                                | Result                                                             | Considerations                                                                         | Additional                                                                                                                                                                           |
-  | --------------------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-  | ![test recording](documentation/tests/test-2-recording.png) | successfully got 2 minutes of a stream using ffmpeg-python package | package is highly accessible, easy to read and small enough to parse in a few minutes. | The base structure for downloading with URLs is built, however, the front end complicates the design. Needs additional information such as the file architecture issue to be sorted. |
-  |                                                           |                                                                    |                                                                                        |                                                                                                                                                                                      |
+- Creating a script to pull an mp4 file from the S3.
+
+| Image/Code                                                | Result                                                                   | Considerations                                                                                     | Additional                                                                                                                                                                                                   |
+| --------------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ![test recording](documentation/tests/test-2-recording.png) | successfully got 2 minutes of a stream using<br /> ffmpeg-python package | package is highly accessible,<br /> easy to read and small enough<br /> to parse in a few minutes. | The base structure for downloading<br /> with URLs is built, however, the front end <br />complicates the design. Needs additional<br /> information such as the file architecture<br /> issue to be sorted. |
 
 An example code is written below.
 
@@ -141,8 +142,6 @@ Very important that we can advantage of the free tier for 1TB of data transer ou
 | ---------- | ------ | -------------- | ---------- |
 |            |        |                |            |
 |            |        |                |            |
-
-
 
 #### Test 7
 
