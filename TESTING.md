@@ -2,8 +2,12 @@
 
 * [Testing](#testing)
   * [Test 1](#test-1)
-  * [Test 2](#test-1)
-  * [Test 3](#test-1)
+  * [Test 2](#test-2)
+  * [Test 3](#test-3)
+  * [Test 4](#test-4)
+  * [Test 5](#test-5)
+  * [Test 6](#test-6)
+  * [Test 7](#test-7)
 
 ## Testing
 
@@ -128,5 +132,25 @@ Very important that we can advantage of the free tier for 1TB of data transer ou
 | ![Cloudfront](documentation/tests/test-5-cloudfront.png)      | I successfully transfered data from the S3<br />through cloudfront |                                                                                 |            |
 | ![Cloudfront](documentation/tests/test-5-cloudfront-code.png) | Example test code                                                  | Issue with environment<br />variables but moved it to top directory for testing |            |
 | ![Cloudfront](documentation/tests/test-5-cloudfront-file.png) | Creates the file as shown 'test.mp4'                               |                                                                                 |            |
+
+#### Test 6
+
+* Build a small front-end test to determine where the recordings end up and cleaning up recording data on the go. Test multiple methods of downloading sample into the front-end.
+
+| Image/Code | Result | Considerations | Additional |
+| ---------- | ------ | -------------- | ---------- |
+|            |        |                |            |
+|            |        |                |            |
+
+
+
+#### Test 7
+
+* Test Lambda fuction event in AWS and catch the event to see what the recording file dictionary event looks like when an event is triggered through this approach for handling S3 data.
+
+| Image/Code | Result | Considerations | Additional |
+| ---------- | ------ | -------------- | ---------- |
+|            |        |                |            |
+|            |        |                |            |
 
 [Back to Top](#table-of-contents)
