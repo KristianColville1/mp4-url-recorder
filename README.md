@@ -211,12 +211,10 @@ within budget and capable of quick access. The automated system should help us i
 * All of the systems will be held in one repository.
 
   Solution B:
-
 * Build a desktop application or script that can be used to fetch recordings.
 * This solution is currently in development as it adds different challenges to the storing of recordings.
 
   Solution C:
-
 * This would be similar to solution A
 * Probably need to use boto3 instead of python bot for manipulating objects in S3
 
@@ -258,7 +256,8 @@ Please go to the testing [documentation.](TESTING.md)
 - [Amazon Web Services EC2](https://aws.amazon.com)
 - [Mockplus](https://mockplus.com) for wireframing.
 - [VSCode](https://vscode.com) for testing and development.
-[FFMPEG Python](https://pypi.org/project/ffmpeg-python/) is not to be confused with the reverse package of the same name, used for fetching and trimming recordings.
+  [FFMPEG Python](https://pypi.org/project/ffmpeg-python/) is not to be confused with the reverse package of the same name, used for fetching and trimming recordings.
+- [Django APScheduler](https://github.com/jcass77/django-apscheduler) is a package that enables storing persistent jobs in the database using Django's ORM.
 
 [Back to Top](#table-of-contents)
 
