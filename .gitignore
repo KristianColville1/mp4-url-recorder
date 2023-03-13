@@ -7,3 +7,4 @@ staticfiles/
 db.sqlite3
 vars.env
 recorder.py
+test.py
