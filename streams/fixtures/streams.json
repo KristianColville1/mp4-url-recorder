@@ -1,12 +1,110 @@
 [
     {
-
         "pk": 1,
         "model": "streams.stream",
         "fields": {
             "name": "Aughrim",
             "image": "None",
             "image_url": "https://churchcamlive.ie/wp-content/uploads/Aughrim-300x169.png"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "streams.stream",
+        "fields": {
+            "name": "AVSSMemorialServices",
+            "image": "None",
+            "image_url": "https://churchcamlive.ie/wp-content/uploads/2020/06/MemoriamServicesBackground-300x169.png"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "streams.stream",
+        "fields": {
+            "name": "Ballina & Boher Parish",
+            "image": "None",
+            "image_url": "https://churchcamlive.ie/wp-content/uploads/Ballina-300x169.png"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "streams.stream",
+        "fields": {
+            "name": "Ballinahinch Killoscully Parish",
+            "image": "None",
+            "image_url": "https://churchcamlive.ie/wp-content/uploads/Killoscully-300x169.png"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "streams.stream",
+        "fields": {
+            "name": "Ballybricken Church",
+            "image": "None",
+            "image_url": "https://churchcamlive.ie/wp-content/uploads/Ballybricken-300x169.png"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "streams.stream",
+        "fields": {
+            "name": "Ballyclough",
+            "image": "None",
+            "image_url": "https://churchcamlive.ie/wp-content/uploads/Ballyclough-1-300x169.png"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "streams.stream",
+        "fields": {
+            "name": "Banogue Parish",
+            "image": "None",
+            "image_url": "https://churchcamlive.ie/wp-content/uploads/Banogue-300x169.png"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "streams.stream",
+        "fields": {
+            "name": "Boherlahan & Dualla Parish",
+            "image": "None",
+            "image_url": "https://churchcamlive.ie/wp-content/uploads/Boherlahan-300x169.png"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "streams.stream",
+        "fields": {
+            "name": "Boher na Nave Church Thurles",
+            "image": "None",
+            "image_url": "https://churchcamlive.ie/wp-content/uploads/Ballyclough-1-300x169.png"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "streams.stream",
+        "fields": {
+            "name": "Borrisokane & Cois Deirge",
+            "image": "None",
+            "image_url": "https://churchcamlive.ie/wp-content/uploads/2020/06/borrisokane1-300x169.png"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "streams.stream",
+        "fields": {
+            "name": "Borrisoleigh & lleigh Parish",
+            "image": "None",
+            "image_url": "https://churchcamlive.ie/wp-content/uploads/Borrisoleigh-1-300x169.png"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "streams.stream",
+        "fields": {
+            "name": "Caherconlish Caherline Parish",
+            "image": "None",
+            "image_url": "https://churchcamlive.ie/wp-content/uploads/Caherconlish-300x169.png"
         }
     }
 ]
