@@ -147,9 +147,9 @@ Very important that we can advantage of the free tier for 1TB of data transer ou
 
 * Test Lambda fuction event in AWS and catch the event to see what the recording file dictionary event looks like when an event is triggered through this approach for handling S3 data.
 
-| Image/Code | Result | Considerations | Additional |
-| ---------- | ------ | -------------- | ---------- |
-|            |        |                |            |
-|            |        |                |            |
+| Image/Code                                            | Result                                                                                                                                            | Considerations                                                                                                                                                                                | Additional                                                                    |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| ![lambda](documentation/img/lambda-topology.png)        | Using a lambda function<br />The files can be added<br />to a destination S3                                                                      | The files added are<br />currently all of them<br />but I can write rules<br />for different formats and <br />to delete specific formats<br />like .ts and m3u8                             |                                                                               |
+| ![lambda tested](documentation/tests/test-7-lambda.png) | Test performed on input S3.<br />Once the file is uploaded the<br />file is copied to the destination<br />S3 and deleted from the source<br />S3 | It might be possible to add<br />additional folder paths or to test<br />if folder paths exist by reading<br />the S3 keys value for the object<br />as it stores the file and the file path. | Remember that S3<br />is flat storage <br />and not contempory<br />storage. |
 
 [Back to Top](#table-of-contents)
