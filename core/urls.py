@@ -27,6 +27,7 @@ urlpatterns = [
     path('', include('home.urls')),
     path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('favicon.ico'))),
     path('advanced/', include('advanced.urls')),
+    path('streams/', include('streams.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 handler404 = handler404

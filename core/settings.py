@@ -50,14 +50,8 @@ INSTALLED_APPS = [
     # custom apps
     'home',
     'advanced',
-    'django_crontab',
     'autobot',
-]
-
-# Cron jobs
-
-CRONJOBS = [
-    ('*/5 * * * *', 'autobot.cron_job_one')
+    'streams',
 ]
 
 # App settings
