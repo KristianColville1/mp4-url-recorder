@@ -22,10 +22,10 @@
             <ul class="mx-sm-1 mx-auto navbar-nav w-100 d-flex nowrap justify-content-end">
                 {% if request.user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Streams</a>
+                    <a class="nav-link" href="{% url 'streams' %}">Streams</a>
                   </li>
                 {% endif %}
                 <li class="nav-link mx-2">
@@ -36,10 +36,6 @@
                         </a>
                         <ul class="dropdown-menu shadow mt-2" aria-labelledby="login-dropdown">
                             {% if request.user.is_authenticated %}
-                            <li>
-                                <a class="dropdown-item" href="/"
-                                    aria-label="click here to view your profile">Profile</a>
-                            </li>
                             <li>
                                 <a class="dropdown-item" href="{% url 'account_logout' %}" aria-label="click here to sign out of FineChop">Sign
                                     Out</a>
