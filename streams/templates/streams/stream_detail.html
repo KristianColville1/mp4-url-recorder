@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'streams/css/streams.css' %}">
+{% endblock extra_css %}
+{% block content %}
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 my-1 border">
+            <img src="{{stream.image_url}}" class="card-img-top" alt="church streams">
+            <h3 class="card-title text-center text-primary ">{{stream.name|truncatechars:12}}</h3>
+            <h3 class="text-center">Recording Information</h3>
+            <h4 class="text-center text-info">Febuary - March 2023</h4>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-7 col-xl-8 my-1">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link stream-tab-last-month active fs-2" aria-current="page"
+                        onclick="getMonth('last_month')">{{last_month}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link stream-tab-this-month fs-2" onclick="getMonth('this_month')">{{this_month}}</a>
+                </li>
+            </ul>
+            <div class="previous-month mt-4 border-2">
+                <div class="calendar-month d-flex flex-wrap">
+                        {% for key, value in previous_month_dict.items %}
+                        <span class="day value fs-3 position-relative">{{value}}
+                            <i class="fa-solid fa-circle-check position-absolute top-50 start-50"></i>
+                        </span>
+                        {% endfor%}
+                </div>
+            </div>
+
+            <div class="present-month mt-4 d-none">
+                <div class="calendar-month d-flex flex-wrap">
+                    {% for key, value in present_month_dict.items %}
+                    <span class="day value fs-3">{{value}}
+                    </span>
+                    {% endfor%}
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block extra_js %}
+<script src="{% static 'streams/js/streams.js' %}"></script>
+{% endblock extra_js %}
