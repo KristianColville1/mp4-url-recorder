@@ -27,5 +27,3 @@ def get_calander_days_of_month(month, year):
     # calendar objects that can be used in the frontend
 
     return calendar_obj
-
-get_calander_days_of_month(2, 2023)
