@@ -39,6 +39,7 @@ Project Owners: Kristian Colville, Declan O'Sullivan
   * [AWS](#aws)
   * [Production Server Guide](#production-server-guide)
 * [Definitions](#definitions)
+* [HOW TO](#how-to)
 
 ## Project Goals
 
@@ -145,6 +146,11 @@ Stream Selection
 | ------------------------------------------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![S3 Design](documentation/img/s3-data-transfer.png)      | Data Transfer | We currently have a file architecture issue<br />I am researching using AWS Lambdas<br />in order to sort the data properly. <br />Click here for [resources](https://stackoverflow.com/questions/74324422/automatically-move-object-from-one-s3-bucket-to-another) for lambdas. <br />Click here for [resources](https://stackoverflow.com/questions/30161700/move-files-between-two-aws-s3-buckets-using-boto3) on boto3. |
 | ![S3 Architecture](documentation/img/s3-architecture.png) | File paths    | Essentially an S3 is flat meaning it has no<br />file paths.<br />Instead it uses artificial methods to give<br />the illusion of depth.<br />To create file paths objects need to be <br />added with the /foldername/file-name.txt<br />Harder to work with as its essentially just <br />a dictionary with key value pairs to store<br />information.                                                            |
+
+#### Lambda
+
+The file sorting, copying and deletion is handled by lambda events. We can attach filters to events lambda receives, for example a suffix filter which watches for changes of specific file types (.mp4, .m3u8, .ts).
+
 
 [Back to Top](#table-of-contents)
 
@@ -318,5 +324,17 @@ Fast Forward MPEG
 It is widely used for format transcoding, basic editing (trimming and concatenation), video scaling, and video post-production effects.
 
 Originally written in C and Assembly language.
+
+[Back to Top](#table-of-contents)
+
+## How To
+
+### How to Set up Gunicorn, Django, Nginx & PostgreSQL - with Ubuntu
+
+Follow link [here](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-22-04) for full guide and process.
+
+### How to Set up Ant Media Server - Ubuntu 20.04
+
+Follow link [here](https://antmedia.io/docs/). You need the enterprise version uploaded to the server to begin the process.
 
 [Back to Top](#table-of-contents)
