@@ -151,6 +151,11 @@ Stream Selection
 
 The file sorting, copying and deletion is handled by lambda events. We can attach filters to events lambda receives, for example a suffix filter which watches for changes of specific file types (.mp4, .m3u8, .ts).
 
+In order for the lambda function to operate properly it needs an elastic IP address.
+
+We need the IP address in order to take advantage of the ability to manipulate our database externally and the IP address will be whitelisted with BlueHost.
+
+![AWS Lambda](documentation/img/lambda-and-ip.png)
 
 [Back to Top](#table-of-contents)
 
